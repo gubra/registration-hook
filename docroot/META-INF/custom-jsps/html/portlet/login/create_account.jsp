@@ -126,7 +126,19 @@ boolean male = ParamUtil.getBoolean(request, "male", true);
 					<aui:validator name="required" />
 				</c:if>
 			</aui:input>
+
+<!-- 			<aui:input name="warrantUserUniqueId">
+				<aui:validator name="required" />
+			</aui:input> -->
 			
+			<liferay-ui:custom-attribute
+				className="<%= User.class.getName() %>"
+				classPK="<%= 0 %>"
+				editable="<%= true %>"
+				label="<%= true %>"
+				name="warrant-user-unique-id"
+			/>
+						
 			<aui:select model="<%= User.class %>" label="country" name="languageId">
 
 				<%
